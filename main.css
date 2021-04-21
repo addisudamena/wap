@@ -78,7 +78,7 @@ dd{
     color:black;
 }
 #favorite{
-    counter-reset: my-custom-counter 6;
+    counter-reset: my-custom-counter 7;
     list-style: none;
 }
 #favorite>li{
