@@ -1,0 +1,92 @@
+body{
+    background: url("./img/bgtile.png") #F2EAD0 scroll;
+    padding: 38px 26px;
+    font-size: 21px;
+    line-height: 40px;
+}
+
+h2,h3{
+    font-size: 26px;
+    font-family: cursive;
+    color:#D93636;
+    padding-top: 16px;
+}
+h2::first-letter{
+    font-size: 39px;
+}
+h3{
+    font-size: 19px;
+}
+h3::first-letter{
+    font-size: 29px;
+}
+strong{
+    color: #de6800;
+    font-style: italic;
+    font-weight: 900;
+}
+.me{
+    height: 172px;
+    border: 10px solid white;
+    border-radius: 3px;
+    box-shadow: 2px 1px 7px #b3aeae;
+}
+.button{
+    height: 35px;
+    border-radius: 3px;
+    box-shadow: 2px 1px 7px #b3aeae;
+}
+ol{
+    line-height: 29px;
+}
+
+#courses{
+    list-style: ethiopic-halehame-ti-er;
+
+}
+li{
+
+}
+li:hover{
+    color:#b3aeae;
+}
+
+li img{
+    border-radius: 34px;
+    box-shadow: 0px 0px 9px #ffb66c;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+a:link {
+    color: blue;
+}
+a:visited{
+    color: darkviolet;
+    text-decoration: underline;
+}
+p::first-letter{
+    font-size: 1.5em;
+}
+dl{
+    font-style:italic;
+    color: #de6800;
+}
+dd{
+    font-size: 0.8em;
+    color:black;
+}
+#favorite{
+    counter-reset: my-custom-counter 6;
+    list-style: none;
+}
+#favorite>li{
+    counter-increment: my-custom-counter -1;
+}
+#favorite>li::before {
+    content: counter(my-custom-counter) '. ';
+    color: #d93636;
+    font-size: 2.5rem;
+}
+
