@@ -9,14 +9,28 @@
 
 
 /* basic elements */
+
+@font-face {
+	font-family: "readabel_font";
+	src: url("./font/WILD_AFRICA.ttf");
+
+}
+
+@font-face {
+	font-family: "unreadabel_font";
+	src: url("./font/WakandaForever-Regular.ttf");
+
+}
+
+
 html {
 	margin: 0;
 	padding: 0;
 }
 body {
-	font: 75% georgia, sans-serif;
+	font:100% georgia, sans-serif;
 	line-height: 1.88889;
-	color: #555753;
+	color: #ffb66c;
 	background: #fff url(./img/zenbg.jpeg)  top left;
 	margin: 0;
 	padding: 0;
@@ -25,11 +39,19 @@ p {
 	margin-top: 0;
 	text-align: justify;
 }
+
+p:first-letter{
+	display: block;
+	color:#ffe985;
+	font-size:150%;
+}
 h3 {
 	font: italic normal 1.4em georgia, sans-serif;
 	letter-spacing: 1px;
 	margin-bottom: 0;
-	color: #7D775C;
+	color: #ffe985;
+	text-shadow: 1px 1px 18px #ffe508;
+	font-family: 'unreadabel_font';
 }
 a:link {
 	font-weight: bold;
@@ -58,20 +80,22 @@ abbr {
 	position: relative;
 }
 
-.intro {
-	min-width: 470px;
-	width: 100%;
+
+.intro,.supporting{
+	width: 79%;
 }
 
 header h1 {
+	font-family: readabel_font;
 	margin: 2px;
 	display: block;
 	width: 90vw;
 	float: left;
 	overflow: hidden;
-	color: #9f8204;
+	color: #da9f62;
 	font-size: 62px;
 	text-shadow: 1px 3px 3px #a20324;
+	mix-blend-mode: hard-light;
 }
 header h2 {
 	margin: -12px 219px;
@@ -81,6 +105,7 @@ header h2 {
 	font-size: 26px;
 	text-shadow: 0 0 1px #9b7e00;
 	background: #5b8583;
+	font-family: unreadabel_font;
 }
 header {
 	padding-top: 20px;
@@ -88,14 +113,17 @@ header {
 }
 
 .summary {
-	clear: both;
-	margin: 20px 20px 20px 10px;
-	width: 160px;
-	float: left;
+	position: absolute;
+	top: 0px;
+	right: 215px;
+	width: 17vw;
+	background: #777777b0;
+	padding: 17px 15px;
+	color: #d6b205;
 }
 .summary p {
-	font: italic 1.1em/2.2 georgia;
-	text-align: center;
+	font: italic 0.9em/2.2 georgia;
+	text-align: end;
 }
 
 .preamble {
@@ -112,48 +140,60 @@ footer {
 }
 footer a:link, footer a:visited {
 	margin-right: 20px;
+	background: url(./img/atext.jpg);
+	padding: 14px 45px;
+	height: 14px;
+}
+
+footer a:hover {
+	background: url(img/btex.jpg);
+
 }
 
 .sidebar {
 	margin-left: 600px;
 	position: absolute;
-	top: 0;
+	top: 106px;
 	right: 0;
+}
+.design-selection,.zen-resources{
+	background:#0000007a;
+}
+
+.design-archives{
+	position: absolute;
+	top: -48px;
+	right: 25px;
+	font-size: 1.4em;
+	text-align: center;
 }
 .sidebar .wrapper {
 	font: 10px verdana, sans-serif;
-	background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y;
+	background: transparent url(./img/dense.jpg) top left repeat-y;
 	padding: 10px;
 	margin-top: 150px;
-	width: 130px;
 }
 .sidebar h3.select {
-	background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left;
-	margin: 10px 0 5px 0;
+		margin: 10px 0 5px 0;
 	width: 97px;
 	height: 16px;
-
-	text-indent: 100%;
 	white-space: nowrap;
 	overflow: hidden;
 }
 .sidebar h3.archives {
-	background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left;
-	margin: 25px 0 5px 0;
+		margin: 25px 0 5px 0;
 	width:57px;
 	height: 14px;
-
-	text-indent: 100%;
 	white-space: nowrap;
 	overflow: hidden;
 }
 .sidebar h3.resources {
-	background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left;
+
 	margin: 25px 0 5px 0;
 	width:63px;
 	height: 10px;
 
-	text-indent: 100%;
+
 	white-space: nowrap;
 	overflow: hidden;
 }
@@ -165,25 +205,41 @@ footer a:link, footer a:visited {
 }
 .sidebar li {
 	line-height: 1.3em;
-	background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center;
+	display: block;
 	display: block;
 	padding-top: 5px;
 	margin-bottom: 5px;
 	list-style-type: none;
 }
 .sidebar li a:link {
-	color: #988F5E;
+	color: #f9eb9d;
+/*
+	background: #332e05;
+	width: 142px;
+	display: block;
+	height: 32px;
+	padding: 5px 10px 0 4px;
+	border-radius: 19px;
+	font-size: 12px;*/
+}
+.design-archives a:link{
+	color: #968e61;
+	background: #332e05;
+	width: 142px;
+	display: block;
+	height: 32px;
+	padding: 5px 10px 0 4px;
+	border-radius: 19px;
+	font-size: 12px;
+}
+.design-archives  a:hover{
+	text-decoration: none;
+	background:#e4da85;
+	color:#352f09;
+
 }
 .sidebar li a:visited {
 	color: #B3AE94;
 }
 
 
-.extra1 {
-	background: transparent url(http://csszengarden.com/001/cr2.gif) top left no-repeat;
-	position: absolute;
-	top: 40px;
-	right: 0;
-	width: 148px;
-	height: 110px;
-}
