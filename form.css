@@ -52,16 +52,28 @@ h1,p{
 }
 #footer{
     background: #e3e3e3;
+    margin: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .button{
-    background:#7aa897;
-    color:white;
+    background: #7aa897;
+    color: white;
+    width: 81px;
+    padding: 6px 16px;
+    margin: 7px 3px 11px;
+    border: none;
 }
 
 #payment_method{
     display: inline;
     width: 47%;
     float: right;
+}
+
+
+input,select{
+    width:38%;
 }
 
