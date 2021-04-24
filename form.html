@@ -19017,7 +19017,7 @@
   function doState(selected){
 
     let toAppend ='';
-    for(i of countries[selected.values].regions){
+    for(i of countries[selected.value].regions){
       toAppend += '<option value="'+i.shortCode+'">'+i.name+'</option>';
     }
     s.innerHTML=toAppend;
