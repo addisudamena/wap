@@ -1,0 +1,157 @@
+let LinkedList = {
+  head: null,
+  Node: {
+    value: null,
+    next: null
+  },
+
+  add: function(x) {
+    let n = Object.create(Node);
+    n.value = x;
+    if (this.head == null) this.head = n;
+    else {
+      let t = this.head;
+      while (t.next != null) {
+        t = t.next;
+      }
+      t.next = n;
+    }
+  },
+
+  remove: function(x) {
+    let t = this.head;
+    let tp = this.head;
+    if (this.head.value == x) {
+      console.log("deleting " + t.value);
+      this.head = this.head.next;
+      return;
+    }
+    while (t.next != null) {
+      if (t.value == x) {
+        tp.next = t.next;
+        console.log("deleting " + t.value);
+        t.value = null;
+        t.next = null;
+
+        return;
+      }
+
+      tp = t;
+      t = t.next;
+    }
+    if (t.value == x) {
+      tp.next = null;
+      console.log("deleting " + t.value);
+      t.value = null;
+      t.next = null;
+    }
+  },
+
+  print: function() {
+    let n = this.head;
+    log = [n.value];
+    while (n.next != null) {
+      n = n.next;
+      log.push(n.value);
+    }
+    console.log(log);
+  }
+};
+
+/*
+let LinkedList= {
+  head : null,
+  Node: {
+    value : x,
+    next : null
+  },
+ 
+  add = function(x) {
+  let n = new Node(x);
+  if (this.head == null) this.head = n;
+  else {
+    let t = this.head;
+    while (t.next != null) {
+      t = t.next;
+    }
+    t.next = n;
+  },
+
+
+  print : function() {
+    let n = this.head;
+    console.log(n.value);
+    log=[];
+    while (n.next != null) {
+      n = n.next;
+      log.push(n.value);
+    }
+    console.log(log);
+  }
+}
+
+}
+
+LinkedList.prototype.add = function(x) {
+  let n = new Node(x);
+  if (this.head == null) this.head = n;
+  else {
+    let t = this.head;
+    while (t.next != null) {
+      t = t.next;
+    }
+    t.next = n;
+  }
+};
+
+LinkedList.prototype.remove = function(x) {
+  let t = this.head;
+  let tp = this.head;
+  if (this.head.value == x) {
+    console.log("deleting " + t.value);
+    this.head = this.head.next;
+    return;
+  }
+  while (t.next != null) {
+    if (t.value == x) {
+      tp.next = t.next;
+      console.log("deleting " + t.value);
+      t.value = null;
+      t.next = null;
+
+      return;
+    }
+
+    tp = t;
+    t = t.next;
+  }
+  if (t.value == x) {
+    tp.next = null;
+    console.log("deleting " + t.value);
+    t.value = null;
+    t.next = null;
+  }
+};
+
+LinkedList.prototype.print = function() {
+  let n = this.head;
+  console.log(n.value);
+  log=[];
+  while (n.next != null) {
+    n = n.next;
+    log.push(n.value);
+  }
+  console.log(log);
+};*/
+let l = Object.create(LinkedList);
+
+l.add(9);
+l.add(3);
+l.add(4);
+l.add(5);
+
+l.print();
+l.remove(5);
+l.add(2);
+l.add(90);
+l.print();
