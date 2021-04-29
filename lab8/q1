@@ -1,0 +1,29 @@
+//Student using object littral
+let student = {
+  fname:"Default First Name",
+  lname:"Default Last Name",
+  grades:[],
+ 
+  inputNewGrade: function(x) {
+    this.grades.push(x);
+  },
+  computeAverageGrade:function() {
+    return this.grades.reduce((a,b)=>a+b)/this.grades.length;
+  }
+};
+
+let students=[];
+let names=[["Hailu","Tessma"],["Bati","Dera"],["Selam","John"],["Karl","Anston"],["Drage","Remore"]];
+
+for(let i=0;i<5;i++){
+	
+    	students[i]=Object.create(student);
+students[i].fname= names[i][0];
+students[i].lname= names[i][1];
+    	students[i].inputNewGrade(Math.round((Math.random() * (4-2.6) + 2.6)*100)/100);
+
+    }
+for(let s of students){
+  console.log(s.fname+" "+s.lname+": "+s.computeAverageGrade())
+}
+
