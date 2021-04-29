@@ -52,8 +52,7 @@ LinkedList.prototype.remove = function(x) {
 
 LinkedList.prototype.print = function() {
   let n = this.head;
-  console.log(n.value);
-  log=[];
+  log=[n.value];
   while (n.next != null) {
     n = n.next;
     log.push(n.value);
