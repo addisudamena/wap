@@ -1,0 +1,68 @@
+//Linked list using class
+
+class Node {
+  constructor(value) {
+    this.value = value;
+  }
+}
+class linkedList {
+  constructor() {
+    this.head = null;
+  }
+  add = function(x) {
+    let n = new Node(x);
+    if (this.head == null) this.head = n;
+    else {
+      let t = this.head;
+      while (t.next != null) {
+        t = t.next;
+      }
+      t.next = n;
+    }
+  };
+  print = function() {
+    let n = this.head;
+    log = [n.value];
+    while (n.next != null) {
+      n = n.next;
+      log.push(n.value);
+    }
+    console.log(log);
+  };
+
+  remove = function(x) {
+    let t = this.head;
+    let tp = this.head;
+    if (this.head.value == x) {
+      console.log("deleting " + t.value);
+      this.head = this.head.next;
+      return;
+    }
+    while (t.next != null) {
+      if (t.value == x) {
+        tp.next = t.next;
+        console.log("deleting " + t.value);
+        t.value = null;
+        t.next = null;
+
+        return;
+      }
+
+      tp = t;
+      t = t.next;
+    }
+    if (t.value == x) {
+      tp.next = null;
+      console.log("deleting " + t.value);
+      t.value = null;
+      t.next = null;
+    }
+  };
+}
+let linkedlist=new linkedList();
+linkedlist.add(1);
+linkedlist.add(2);
+linkedlist.add(3);
+linkedlist.print(); //in the console, you should see: LinkedList{1,2,3}
+linkedlist.remove(3);
+linkedlist.print(); //in the console, you should see: LinkedList{1,2}
