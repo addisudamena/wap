@@ -22,10 +22,6 @@ public class Quiz {
         return answer;
     }
 
-    public static List<Quiz> getQuizes(){
-        List<Quiz> l=new ArrayList<>();
-        l.add(new Quiz(new int[]{1,2,3,4},4 ));
-        return l;
-    }
+ 
 
 }
