@@ -1,0 +1,21 @@
+<taglib>
+    <tlib-version>1.0</tlib-version>
+    <jsp-version>1.2</jsp-version>
+    <short-name>DT</short-name>
+    <uri>https://java.sun.com/jsp/myTag</uri>
+    <description>A tag library that applies the color and sets the font-size of the body</description>
+    <tag>
+        <name>DateTime</name>
+        <tag-class>com.example.lab_14.MyTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>color</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>size</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+</taglib>
