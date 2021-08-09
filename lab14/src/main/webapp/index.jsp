@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>JSP - Web Strore</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
+<h1><%= "Welcome to the pebstore!" %>
 </h1>
 <br/>
 <a href="result.jsp">Hello Servlet</a>
